@@ -3,9 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: 
-  <a href="https://smartcomputing.unifi.it/">PhD in Smart Computing</a> • 
-  <a href="https://www.dinfo.unifi.it/">Department of Information Engineering</a> •
-  <a href="https://www.unifi.it/">University of Florence</a>
+  Personal website of Yuxuan Hou
 
 profile:
   align: right
@@ -16,15 +14,13 @@ profile:
     # <p>123 your address street</p>
     # <p>Your City, State 12345</p>
 
-news: true  # includes a list of news items
+news: false  # hide template sample news until replaced with your own
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # disable template sample publications on the homepage
 social: false  # includes social icons at the bottom of the page
 ---
 
-Ph.D. student in <a href="https://smartcomputing.unifi.it/">Smart Computing</a> at the University of Florence, I deal with Artificial Intelligence developing  possible applications to Particle Physics and Medical Physics. Passionate about innovation and scientific dissemination, I never refuse going out to discuss new ideas.
-
-In June 2020 I got the master degree in Physics and Astrophysics with a thesis work for which I spent three months at CERN thanks to a scholarship founded by the National Institute for Nuclear Physics (INFN).
+Welcome to my personal website. Here you can find information about my background, CV, and publications.
 
 <section id="publications" class="mt-5">
   <h2>publications</h2>
