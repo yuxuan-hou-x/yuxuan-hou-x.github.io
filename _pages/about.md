@@ -1,53 +1,37 @@
 ---
-layout: About
+layout: about
 permalink: /
-title: <strong>Mayank</strong> Mittal
-description: Graduate Student | ETH Zurich | NVIDIA
+title: <strong>Yuxuan</strong> Hou
+description: Personal Website
 
 profile:
   align: right
-  image: prof_pic2.jpg
-  address: #mention address
+  image: prof_pic.jpg
+  address: >
+    Hangzhou, China<br/>
+    Zhejiang University<br/>
+    <a href="mailto:yuxuanhou@zju.edu.cn">yuxuanhou@zju.edu.cn</a>
 
-news: true
+news: false
 social: true
-years: [2024, 2023, 2022, 2021, 2020, 2019, 2018]
 ---
 
-_How can a robot learn to use its different parts for interactions?_  
-_How can we go beyond proprioception for robust mobile manipulation?_  
-_What abstractions are necessary to describe multiple tasks?_ 
+I am **Yuxuan Hou**, and this website is a home for my academic profile, projects, and ongoing work.
 
-To find *some* answers to the above questions, I am currently a PhD student at [ETH Zurich](https://ethz.ch/en.html) advised by [Marco Hutter](http://www.rsl.ethz.ch/the-lab/people/person-detail.html?persid=121911), and a Research Scientist at [NVIDIA Research](https://www.nvidia.com/en-us/research/).
+I am currently building out this page based on the clean academic style used by `al-folio`, with a structure similar to the one used on Matteo Barbetti's site. The goal is to keep the homepage concise and make it easy to browse my background, publications, code, and CV from the navigation bar.
 
-Over the span of my career, I have had the opportunity to work with some amazing robotic groups
-on many different robotic platforms.
-I have been a visiting student researcher at [Vector Institute](https://vectorinstitute.ai/),
-a research intern at [NNAISENSE](https://nnaisense.com/), and a part-time research engineer
-at [ETH Zurich](https://ethz.ch/en.html). During my undergrad at [IIT Kanpur](http://www.iitk.ac.in/ee/), I was a visiting student at
-University of Freiburg, Germany, working closely with [Abhinav Valada](http://www2.informatik.uni-freiburg.de/~valada/) and [Wolfram Burgard](http://www2.informatik.uni-freiburg.de/~burgard/).
-I also founded the [AUV-IITK](https://auv-iitk.github.io/#/landing-page) team, where I worked on different
-hardware and software aspects of building an autonomous underwater vehicle.
+You can use this front page as a short introduction. The more detailed sections now live in separate pages:
 
-If you have questions or would like to discuss ideas, feel free to reach out through
-[email](mailto:mittalma@ethz.ch)!
+- [Bio](/bio/) for background and timeline
+- [Code](/code/) for repositories and technical work
+- [Projects](/projects/) for selected projects
+- [Publications](/publications/) for papers and manuscripts
+- [CV](/cv/) for resume and contact information
 
-<!-- _Shameless promotion:_  
-For undergrad/graduate students at [ETH Zurich](https://ethz.ch/en.html): In case you are looking for semester projects or master thesis, please check [here](https://rsl.ethz.ch/education-students.html) for available projects with me and other amazing people in our group! -->
+If you want to reach me, email is the best channel: [yuxuanhou@zju.edu.cn](mailto:yuxuanhou@zju.edu.cn).
 
 <div class="post">
-
   {% if page.news %}
-    {% include news.html %}
+  {% include news.html %}
   {% endif %}
-
 </div>
-
----
-
-{: #publications}
-## __some publications__
-
-{% for y in page.years %}
-  {% bibliography -f papers -q @*[year={{y}}]* %}
-{% endfor %}

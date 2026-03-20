@@ -1,7 +1,24 @@
-_site
-.sass-cache
+# Jekyll build output
+_site/
+.jekyll-cache/
 .jekyll-metadata
-.DS_store
-.ruby-version
-Gemfile.lock
-.vscode
+.sass-cache/
+
+# Local Ruby / Bundler environment
+.bundle/
+.gem/
+.home/
+vendor/
+
+# Editor / OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and temp files
+*.log
+tmp/
+temp/

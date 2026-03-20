@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+
+export GEM_HOME="$ROOT_DIR/.gem"
+export GEM_PATH="$ROOT_DIR/.gem"
+export PATH="$ROOT_DIR/.gem/bin:$PATH"
+export HOME="$ROOT_DIR/.home"
+
+cd "$ROOT_DIR"
+bundle _2.4.22_ exec jekyll serve --livereload

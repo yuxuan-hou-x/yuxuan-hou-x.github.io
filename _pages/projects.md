@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A collection of projects during my studies.
+description: Selected projects and current work.
 ---
 
 {% for project in site.projects %}
@@ -47,26 +47,15 @@ description: A collection of projects during my studies.
 
 {% endfor %}
 
-##### At ETH Zurich
+## Selected Work
 
-* Online Adaptation using Graph Networks in Model-based RL
-* Using Semantics to detect Camera Miscalibrations
-* Multi-camera DeepTAM ([report](/assets/documents/projects/Multicam_Deeptam.pdf), [code](https://github.com/surirohit/multi-camera-deeptam))
-* Verification of Neural Networks using Linear Programming ([report](/assets/documents/projects/RIAI_Manuel_Mayank.pdf), [code](https://github.com/Mayankm96/verify_neural_networks))
-* Monocular Odometry with Bundle Adjustment ([report](/assets/documents/projects/VA4MR_Mini_Project.pdf), [video](https://www.youtube.com/watch?v=trbBh8Rjc4s&feature=youtu.be), [code](https://github.com/Mayankm96/Mono-Odometry))
+This section is ready for your featured work. The project cards above are generated from entries in the `_projects/` collection, so you can keep expanding the page simply by adding new Markdown files there.
 
-##### At IIT Kanpur
+Suggested categories for this page:
 
-* Survey on Variational Autoencoders for Bayesian Inference ([report](/assets/documents/projects/cs698-report.pdf))
-* Multi- Robot System for Bomb Disposal ([poster](/assets/documents/projects/Abhyast_Plan.jpg), [code](https://github.com/Boeing-Abhyast/Phase-VII))
-* Visual Odometry using careful Feature Selection and Tracking ([report](/assets/documents/projects/ee698-report.pdf), [code](https://github.com/Mayankm96/Stereo-Odometry-SOFT))
-* MATLAB based GUI for Motion Planning ([code](https://github.com/Mayankm96/Motion-Planning-GUI))
-* Failure Handling in Swarm of Quadrotors ([report](/assets/documents/projects/cs637-report.pdf))
+- Research projects
+- Open-source repositories
+- Course or lab work
+- Side projects and prototypes
 
-### open source projects
-
-* ROS package for AirSim simulator- in C++ ([code](https://github.com/Mayankm96/airsim_img_publisher))
-* ROS package for AirSim simulator- in Python ([code](https://github.com/Mayankm96/airsim_ros_client))
-* ROS package for saving data published from Zed Camera ([code](https://github.com/Mayankm96/extract_zed_data))
-* ROS package for publishing data from Sparton AHRS8 sensor ([code](https://github.com/Mayankm96/sparton_ahrs8_driver))
-* Python project for reinforcement learning with Trifinger robot [code](https://github.com/pairlab/leibnizgym/)
+If you want, I can also help you replace the existing sample cards in `_projects/` with your real project content in the next step.

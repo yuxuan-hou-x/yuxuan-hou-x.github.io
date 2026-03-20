@@ -2,6 +2,7 @@
 # Site settings
 ###############################################################################
 name: Yuxuan Hou
+title: Yuxuan Hou
 email: yuxuanhou@zju.edu.cn
 description: > # this means to ignore newlines until "url:"
   Personal website for Yuxuan Hou.
@@ -9,22 +10,22 @@ footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-url: # the base hostname & protocol for your site
+url: https://hhyxx.github.io
 baseurl:   # the subpath of your site, e.g. /blog/
 last_updated: # leave blank if you don't want to display last updated
 
 # google-analytics
-google_analytics: UA-92958928-1
-repo: http://github.com/hhyxx
+google_analytics:
+repo: https://github.com/hhyxx/yuxuan-hou-x.github.io
 
 ###############################################################################
 # Social integration
 ###############################################################################
 github_username: hhyxx # put your github username
-twitter_username: mayankm155 # put your twitter username
-linkedin_username: mayankm-0096 # put your linkedin username
-scholar_authorid: BGNWxNMAAAAJ # put your google scholar author id
-contact_note: #  You can even add a little note about which of these is the best way to reach you.
+twitter_username:
+linkedin_username:
+scholar_authorid:
+contact_note: Feel free to reach out by email if you would like to collaborate or chat.
 
 ###############################################################################
 # Blog
@@ -43,10 +44,10 @@ text:
     older: 'Older'
 
 # Comments
-disqus_shortname: mayankm-96 # put your disqus shortname
+disqus_shortname:
 
 # Optional features
-show_social_icons:  false
+show_social_icons:  true
 enable_anchorjs:    false
 enable_katex:       true
 
@@ -85,8 +86,8 @@ plugins:
 # Jekyll-Scholar
 scholar:
 
-  last_name: Mittal
-  last_name_equal: Mittal*
+  last_name: Hou
+  last_name_equal: Hou*
 
   style: apa
   locale: en
