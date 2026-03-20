@@ -26,6 +26,16 @@ Ph.D. student in <a href="https://smartcomputing.unifi.it/">Smart Computing</a> 
 
 In June 2020 I got the master degree in Physics and Astrophysics with a thesis work for which I spent three months at CERN thanks to a scholarship founded by the National Institute for Nuclear Physics (INFN).
 
+<section id="publications" class="mt-5">
+  <h2>publications</h2>
+  <p>
+    My up-to-date publication record is maintained on Google Scholar.
+  </p>
+  <p>
+    <a class="btn btn-sm z-depth-0" href="https://scholar.google.com/citations?user=wojeuO8AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">View My Google Scholar Profile</a>
+  </p>
+</section>
+
 <!--
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
