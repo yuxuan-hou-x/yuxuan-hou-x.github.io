@@ -6,5 +6,5 @@ description: Project page for the paper on automated analog circuit design with 
 img: assets/img/publication_preview/cktgen.png
 importance: 1
 category: research
-redirect: /cktgen/
+redirect: /CktGen/
 ---
