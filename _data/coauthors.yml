@@ -1,10 +1,10 @@
-"Anderlini":
-  - firstname: ["Lucio", "L."]
+"Hehe Fan":
+  - firstname: ["Hehe", "H."]
     url: 
     orcid: 0000-0001-6808-2418
 
-"Capelli":
-  - firstname: ["Simone", "S."]
+"Yi Yang":
+  - firstname: ["Yi", "Y."]
     url:
     orcid: 0000-0002-8444-4498
 
@@ -17,36 +17,3 @@
   - firstname: ["Adam", "A."]
     url: 
     orcid: 0000-0001-9458-5115
-
-"Derkach":
-  - firstname: ["Denis", "D."]
-    url: # https://www.hse.ru/en/org/persons/148813333
-    orcid: 0000-0001-5871-0628
-
-"Kazeev":
-  - firstname: ["Nikita", "N."]
-    url: # https://ifim.nus.edu.sg/people/nikita-kazeev
-    orcid: 0000-0002-5699-7634
-
-"Maevskiy":
-  - firstname: ["Artem", "A."]
-    url: # https://ifim.nus.edu.sg/people/artem-maevskiy
-    orcid: 0000-0003-1652-8005
-
-"Martinelli":
-  - firstname: ["Maurizio", "M."]
-    url:
-    orcid: 0000-0003-4792-9178
-
-"Mokhnenko":
-  - firstname: ["Sergei", "S."]
-    url:
-    orcid: 0000-0002-1849-1472
-
-"Ratnikov":
-  - firstname: ["Fedor", "F."]
-    url: # https://www.hse.ru/en/org/persons/174480967
-
-"Rogachev":
-  - firstname: ["Alexander", "A."]
-    url: # https://www.hse.ru/en/org/persons/364639737

@@ -11,6 +11,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S2095809925008148},
 author = {Yuxuan Hou and Hehe Fan and Jianrong Zhang and Yue Zhang and Hua Chen and Min Zhou and Faxin Yu and Roger Zimmermann and Yi Yang},
 keywords = {Artificial intelligence, Electronic design automation, Circuit generator, Test-time optimization},
 abstract = {The automatic synthesis of analog circuits presents significant challenges. Most existing approaches formulate the problem as a single-objective optimization task, overlooking the fact that design specifications for a given circuit type can vary widely across applications. To address this limitation, we introduce specification-conditioned analog circuit generation, a task that directly generates analog circuits based on stated specifications. The motivation is to find an effective method that leverages existing well-designed circuits to improve automation in analog circuit design. Specifically, we propose CktGen, a simple yet effective variational autoencoder model that maps discretized specifications and circuits into a joint latent space and reconstructs the circuit from that latent vector. Notably, as a single specification may correspond to multiple valid circuits, naively fusing the specification information into a generative model does not capture these one-to-many relationships. To address this, we first decouple the encoding process of circuits and specifications and align their mapped latent space. Then, we employ contrastive training with a filter mask to maximize differences between encoded circuits and specifications. Furthermore, classifier guidance along with latent feature alignment promotes the clustering of circuits sharing the same specification, thus avoiding model collapse into trivial one-to-one mappings. By canonicalizing the latent space with respect to the specifications, we can further optimize and search for an optimal circuit that meets the valid target specification. We conduct comprehensive experiments on the open circuit benchmark and introduce several metrics to evaluate cross-model consistency in the specification-conditioned circuit generation task. The experimental results demonstrate that CktGen achieves substantial improvements over existing state-of-the-art methods.}
+code={https://github.com/yuxuan-hou-x/CktGen}
 }
 
 @misc{dong2026superresearchansweringhighly,
@@ -18,8 +19,11 @@ abstract = {The automatic synthesis of analog circuits presents significant chal
       author={Yubo Dong and Nianhao You and Yuxuan Hou and Zixun Sun and Yue Zhang and Liang Zhang and Siyuan Zhao and Hehe Fan},
       year={2026},
       eprint={2603.00582},
+      arxiv={2603.00582},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2603.00582}, 
       doi = {https://doi.org/10.48550/arXiv.2603.00582},
+      website = {https://cnsdqd-dyb.github.io/Super-Research-Benchmark/},
+      preview = {data_dist.pdf}
 }
