@@ -6,6 +6,9 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
 
   h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: 66px;
@@ -40,7 +43,39 @@ body.sticky-bottom-footer {
  * Publications
  ******************************************************************************/
 
-// TODO: redefine publications layout.
+.publications {
+  margin-top: 0.75rem;
+
+  .row {
+    margin-bottom: 1.75rem;
+  }
+
+  .title {
+    font-size: 1.08rem;
+    line-height: 1.55;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+
+  .author,
+  .periodical,
+  .links {
+    font-size: 0.97rem;
+    line-height: 1.65;
+  }
+
+  .author {
+    margin-bottom: 0.2rem;
+  }
+
+  .periodical {
+    color: var(--global-text-color-light);
+  }
+
+  .links {
+    margin-top: 0.45rem;
+  }
+}
 
 
 /*****************************************************************************
