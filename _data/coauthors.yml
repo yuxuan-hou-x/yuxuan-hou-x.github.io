@@ -1,59 +1,52 @@
-# Adams:
-#     url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Anderlini":
+  - firstname: ["Lucio", "L."]
+    url: 
+    orcid: 0000-0001-6808-2418
 
-Valada:
-  url: http://www2.informatik.uni-freiburg.de/~valada/
+"Capelli":
+  - firstname: ["Simone", "S."]
+    url:
+    orcid: 0000-0002-8444-4498
 
-Burgard:
-  url: http://www2.informatik.uni-freiburg.de/~burgard/
+"Corti":
+  - firstname: ["Gloria", "G."]
+    url:
+    orcid: 0000-0003-2857-4471
 
-Mohan:
-  url: https://www.linkedin.com/in/rohit-mohan-508112142/
+"Davis":
+  - firstname: ["Adam", "A."]
+    url: 
+    orcid: 0000-0001-9458-5115
 
-Siegwart:
-  url: https://mavt.ethz.ch/the-department/people/person-detail.Mjk5ODE=.TGlzdC81NTMsLTY5MzYxOTMw.html
+"Derkach":
+  - firstname: ["Denis", "D."]
+    url: # https://www.hse.ru/en/org/persons/148813333
+    orcid: 0000-0001-5871-0628
 
-Cadena:
-  url: http://n.ethz.ch/~cesarc/
+"Kazeev":
+  - firstname: ["Nikita", "N."]
+    url: # https://ifim.nus.edu.sg/people/nikita-kazeev
+    orcid: 0000-0002-5699-7634
 
-Petrov:
-  url: https://www.linkedin.com/in/aleksandar-petrov/
+"Maevskiy":
+  - firstname: ["Artem", "A."]
+    url: # https://ifim.nus.edu.sg/people/artem-maevskiy
+    orcid: 0000-0003-1652-8005
 
-Suri:
-  url: https://www.linkedin.com/in/rohit-suri-0966b0b3/
+"Martinelli":
+  - firstname: ["Maurizio", "M."]
+    url:
+    orcid: 0000-0003-4792-9178
 
-Cramariuc:
-  url: https://asl.ethz.ch/the-lab/people/person-detail.MjMxMjQw.TGlzdC8xNTg0LDEyMDExMzk5Mjg=.html
+"Mokhnenko":
+  - firstname: ["Sergei", "S."]
+    url:
+    orcid: 0000-0002-1849-1472
 
-Gallieri:
-  url: https://ch.linkedin.com/in/marco-gallieri-166a0421
+"Ratnikov":
+  - firstname: ["Fedor", "F."]
+    url: # https://www.hse.ru/en/org/persons/174480967
 
-Quaglino:
-  url: https://ch.linkedin.com/in/aqua83
-
-Salehian:
-  url: https://ch.linkedin.com/in/seyed-sina-mirrazavi-salehian-11772856
-
-Koutnik:
-  url: http://www.idsia.ch/~koutnik
-
-Garg:
-  url: http://animesh.garg.tech/
-
-Hutter:
-  url: https://rsl.ethz.ch/
-
-Handa:
-  url: https://ankurhanda.github.io/
-
-Allshire:
-  url: https://allshire.org/
-
-Farshidian:
-  url: https://scholar.google.ch/citations?user=ciragesAAAAJ&hl=en
-
-Rudin:
-  url: https://ch.linkedin.com/in/nikita-rudin-bb3199121
-
-State:
-  url: https://ca.linkedin.com/in/gavstate
+"Rogachev":
+  - firstname: ["Alexander", "A."]
+    url: # https://www.hse.ru/en/org/persons/364639737

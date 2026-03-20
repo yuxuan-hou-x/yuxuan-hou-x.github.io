@@ -1,0 +1,12 @@
+github_users:
+  - mbarbetti
+
+github_repos:
+  - mbarbetti/calotron
+  - mbarbetti/tf-gen-models
+  - landerlini/scikinC
+  #- landerlini/hopaas
+  - landerlini/hopaas_client
+  - LamarrSim/SQLamarr
+  - LamarrSim/PyLamarr
+  - mbarbetti/mediastinal-lymphoma-classification

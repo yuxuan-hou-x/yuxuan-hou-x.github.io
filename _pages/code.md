@@ -1,22 +1,44 @@
 ---
 layout: page
-title: Code
 permalink: /code/
-description: Repositories, open-source work, and technical projects.
+title: code
+description:
+nav: true
+nav_order: 2
 ---
 
-## GitHub
+## GitHub users
 
-My public code is available on [GitHub](https://github.com/hhyxx).
+{% if site.data.repositories.github_users %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for user in site.data.repositories.github_users %}
+    {% include repository/repo_user.html username=user %}
+  {% endfor %}
+</div>
 
-## Featured Repositories
+---
 
-Add a short curated list here, for example:
+{% if site.repo_trophies.enabled %}
+{% for user in site.data.repositories.github_users %}
+  {% if site.data.repositories.github_users.size > 1 %}
+    <h4>{{ user }}</h4>
+  {% endif %}
+  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+    {% include repository/repo_trophies.html username=user %}
+  </div>
 
-- Repository name with one-line description
-- Research code with paper/project link
-- Utilities, demos, or experiments
+  ---
 
-## Notes
+{% endfor %}
+{% endif %}
+{% endif %}
 
-This page is a good place to separate polished public code from broader project descriptions on the projects page.
+## GitHub Repositories
+
+{% if site.data.repositories.github_repos %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for repo in site.data.repositories.github_repos %}
+    {% include repository/repo.html repository=repo %}
+  {% endfor %}
+</div>
+{% endif %}

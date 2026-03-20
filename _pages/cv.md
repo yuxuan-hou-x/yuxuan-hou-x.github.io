@@ -1,17 +1,8 @@
 ---
-layout: page
-title: CV
+layout: cv
 permalink: /cv/
-description: Curriculum vitae and contact details.
+title: cv
+nav: true
+nav_order: 6
+cv_pdf: example_pdf.pdf
 ---
-
-## Curriculum Vitae
-
-This page is set up as a stable CV entry in the navigation.
-
-You can either:
-
-- Upload a PDF such as `assets/documents/Yuxuan_Hou_CV.pdf` and link it here
-- Or keep a web version of your CV directly on this page
-
-At the moment, please contact me by email for the latest version: [yuxuanhou@zju.edu.cn](mailto:yuxuanhou@zju.edu.cn).

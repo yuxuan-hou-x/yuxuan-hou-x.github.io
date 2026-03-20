@@ -1,37 +1,35 @@
 ---
 layout: about
+title: about
 permalink: /
-title: <strong>Yuxuan</strong> Hou
-description: Personal Website
+subtitle: 
+  <a href="https://smartcomputing.unifi.it/">PhD in Smart Computing</a> • 
+  <a href="https://www.dinfo.unifi.it/">Department of Information Engineering</a> •
+  <a href="https://www.unifi.it/">University of Florence</a>
 
 profile:
   align: right
   image: prof_pic.jpg
-  address: >
-    Hangzhou, China<br/>
-    Zhejiang University<br/>
-    <a href="mailto:yuxuanhou@zju.edu.cn">yuxuanhou@zju.edu.cn</a>
+  image_circular: false # crops the image to make it circular
+  address: # >
+    # <p>555 your office number</p>
+    # <p>123 your address street</p>
+    # <p>Your City, State 12345</p>
 
-news: false
-social: true
+news: true  # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: false  # includes social icons at the bottom of the page
 ---
 
-I am **Yuxuan Hou**, and this website is a home for my academic profile, projects, and ongoing work.
+Ph.D. student in <a href="https://smartcomputing.unifi.it/">Smart Computing</a> at the University of Florence, I deal with Artificial Intelligence developing  possible applications to Particle Physics and Medical Physics. Passionate about innovation and scientific dissemination, I never refuse going out to discuss new ideas.
 
-I am currently building out this page based on the clean academic style used by `al-folio`, with a structure similar to the one used on Matteo Barbetti's site. The goal is to keep the homepage concise and make it easy to browse my background, publications, code, and CV from the navigation bar.
+In June 2020 I got the master degree in Physics and Astrophysics with a thesis work for which I spent three months at CERN thanks to a scholarship founded by the National Institute for Nuclear Physics (INFN).
 
-You can use this front page as a short introduction. The more detailed sections now live in separate pages:
+<!--
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-- [Bio](/bio/) for background and timeline
-- [Code](/code/) for repositories and technical work
-- [Projects](/projects/) for selected projects
-- [Publications](/publications/) for papers and manuscripts
-- [CV](/cv/) for resume and contact information
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-If you want to reach me, email is the best channel: [yuxuanhou@zju.edu.cn](mailto:yuxuanhou@zju.edu.cn).
-
-<div class="post">
-  {% if page.news %}
-  {% include news.html %}
-  {% endif %}
-</div>
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+-->
