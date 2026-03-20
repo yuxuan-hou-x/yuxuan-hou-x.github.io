@@ -23,6 +23,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
 }
 
 hr {
@@ -212,10 +213,12 @@ blockquote {
 
   .navbar-brand {
     color: var(--global-text-color);
+    letter-spacing: -0.015em;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    letter-spacing: -0.01em;
 
     &:hover {
       color: var(--global-hover-color);
@@ -979,11 +982,13 @@ nav[data-toggle="toc"] {
   .about-title {
     font-size: 2.5rem;
     margin-bottom: 0rem;
+    letter-spacing: -0.03em;
   }
   .about-desc {
     font-size: 0.9rem;
     margin-bottom: 1.8rem;
     color: var(--global-text-color-light);
+    letter-spacing: -0.015em;
     a {
       color: var(--global-text-color-light);
       &:hover {
@@ -1001,6 +1006,7 @@ nav[data-toggle="toc"] {
   h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
+    letter-spacing: -0.02em;
     span {
       font-size: 1.5rem;
     }
