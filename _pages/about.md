@@ -14,7 +14,7 @@ profile:
     # <p>123 your address street</p>
     # <p>Your City, State 12345</p>
 
-news: false  # hide template sample news until replaced with your own
+news: true
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # disable template sample publications on the homepage
 social: false  # includes social icons at the bottom of the page
@@ -24,11 +24,12 @@ Welcome to my personal website. Here you can find information about my backgroun
 
 <section id="publications" class="mt-5">
   <h2>publications</h2>
-  <p>
-    My up-to-date publication record is maintained on Google Scholar.
-  </p>
-  <p>
-    <a class="btn btn-sm z-depth-0" href="https://scholar.google.com/citations?user=wojeuO8AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">View My Google Scholar Profile</a>
+  <div class="publications">
+    {% bibliography -f yuxuan_selected %}
+  </div>
+  <p class="mt-3">
+    For the full and most up-to-date list, please visit
+    <a href="https://scholar.google.com/citations?user=wojeuO8AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.
   </p>
 </section>
 
