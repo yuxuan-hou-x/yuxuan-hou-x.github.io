@@ -22,7 +22,9 @@ social: false  # includes social icons at the bottom of the page
 
 Welcome to my personal website. Here you can find information about my background, CV, and publications.
 
-<section id="publications" class="mt-5">
+<div class="about-section-divider"></div>
+
+<section id="publications" class="about-section-block">
   <h2>Publications</h2>
   <div class="publications">
     {% bibliography -f yuxuan_selected %}

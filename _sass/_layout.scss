@@ -35,6 +35,17 @@ body.sticky-bottom-footer {
 
 // TODO: redefine content layout.
 
+.about-section-divider {
+  clear: both;
+  width: 100%;
+  margin: 2rem 0 1.5rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.about-section-block {
+  clear: both;
+}
+
 
 /******************************************************************************
  * Publications
