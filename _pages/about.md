@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: 
   Personal website of Yuxuan Hou
@@ -23,7 +23,7 @@ social: false  # includes social icons at the bottom of the page
 Welcome to my personal website. Here you can find information about my background, CV, and publications.
 
 <section id="publications" class="mt-5">
-  <h2>publications</h2>
+  <h2>Publications</h2>
   <div class="publications">
     {% bibliography -f yuxuan_selected %}
   </div>

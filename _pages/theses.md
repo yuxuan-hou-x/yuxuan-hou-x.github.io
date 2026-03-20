@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/theses
-title: publications
+title: Publications
 description: publication profile
 nav: false
 ---

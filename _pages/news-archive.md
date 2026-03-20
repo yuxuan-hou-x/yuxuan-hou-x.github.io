@@ -1,6 +1,6 @@
 ---
 layout: page
-title: news archive
+title: News Archive
 permalink: /news-archive/
 description: the archive of (mostly) academic news
 nav: false
