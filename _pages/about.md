@@ -16,6 +16,7 @@ profile:
 
 news: true
 publications_section: true
+publications_heading: Publications
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # disable template sample publications on the homepage
 social: false  # includes social icons at the bottom of the page

@@ -49,9 +49,11 @@ layout: default
 
     <!-- Publications -->
     {% if page.publications_section -%}
-      <div id="publications" class="about-section-divider"></div>
+      {%- assign publications_heading = page.publications_heading | default: "Publications" -%}
+      {%- assign publications_anchor = publications_heading | slugify -%}
+      <div id="{{ publications_anchor }}" class="about-section-divider"></div>
       <section class="about-section-block">
-        <h2>Publications</h2>
+        <h2>{{ publications_heading }}</h2>
         <div class="publications">
           {% bibliography -f yuxuan_selected %}
         </div>
