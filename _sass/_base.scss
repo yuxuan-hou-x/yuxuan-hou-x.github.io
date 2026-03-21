@@ -681,22 +681,25 @@ footer.sticky-bottom {
 
       .links {
         margin-top: 0.6rem;
+        margin-left: 0;
+        padding-left: 0;
 
         a.btn {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-width: 5.75rem;
+          min-width: 4.9rem;
           color: var(--global-theme-color);
           background-color: var(--global-bg-color);
           border: 1px solid var(--global-divider-color);
           border-radius: 0;
           box-shadow: none;
-          font-size: 1rem;
+          font-size: 0.92rem;
           font-weight: 500;
-          padding: 0.55rem 1.15rem;
-          margin-right: 0.55rem;
-          margin-bottom: 0.55rem;
+          padding: 0.42rem 0.9rem;
+          margin-left: 0;
+          margin-right: 0.45rem;
+          margin-bottom: 0.45rem;
           line-height: 1.1;
           transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 
