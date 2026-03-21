@@ -680,18 +680,31 @@ footer.sticky-bottom {
       }
 
       .links {
+        margin-top: 0.6rem;
+
         a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 5.75rem;
+          color: var(--global-theme-color);
+          background-color: var(--global-bg-color);
+          border: 1px solid var(--global-divider-color);
+          border-radius: 0;
+          box-shadow: none;
+          font-size: 1rem;
+          font-weight: 500;
+          padding: 0.55rem 1.15rem;
+          margin-right: 0.55rem;
+          margin-bottom: 0.55rem;
+          line-height: 1.1;
+          transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 
           &:hover {
             color: var(--global-hover-color);
-            border-color: var(--global-hover-color);
+            border-color: var(--global-theme-color);
+            background-color: var(--global-hover-color-light);
+            text-decoration: none;
           }
         }
       }
