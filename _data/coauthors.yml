@@ -1,19 +1,19 @@
-"Hehe Fan":
+"Fan":
   - firstname: ["Hehe", "H."]
     url: https://hehefan.github.io/
     orcid: 0000-0001-6808-2418
 
-"Yi Yang":
+"Yang":
   - firstname: ["Yi", "Y."]
-    url: 
+    url: https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en
     orcid: 0000-0002-8444-4498
 
-"Jianrong Zhang":
+"Zhang":
   - firstname: ["Jianrong", "J."]
     url:
     orcid: 0000-0003-2857-4471
 
-"Roger Zimmermann":
+"Zimmermann":
   - firstname: ["Roger", "R."]
-    url: 
+    url: https://www.comp.nus.edu.sg/cs/people/rogerz/
     orcid: 0000-0001-9458-5115
