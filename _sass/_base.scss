@@ -176,6 +176,9 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  min-height: 84px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 .navbar .dropdown-menu {
@@ -214,11 +217,15 @@ blockquote {
   .navbar-brand {
     color: var(--global-text-color);
     letter-spacing: -0.015em;
+    font-size: 2.1rem;
+    line-height: 1.2;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
     letter-spacing: -0.01em;
+    font-size: 1.5rem;
+    padding: 0.8rem 0.95rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -256,13 +263,15 @@ blockquote {
 }
 
 .navbar-toggler {
+  padding: 0.6rem 0.75rem;
+
   .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
+    width: 30px;
+    height: 3px;
     background-color: var(--global-text-color);
     border-radius: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     transition: all 0.2s;
   }
 
