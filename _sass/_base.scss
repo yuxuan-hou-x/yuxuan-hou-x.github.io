@@ -644,10 +644,12 @@ footer.sticky-bottom {
           }
         }
 
-        >em {
+        >em,
+        >strong.self-author {
           border-bottom: 1px solid;
           font-style: normal;
           color: var(--global-theme-color);
+          font-weight: 700;
         }
 
         >span.more-authors {
