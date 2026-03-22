@@ -1060,10 +1060,12 @@ nav[data-toggle="toc"] {
       }
 
       td {
-        text-align: justify;
+        text-align: left;
         font-size: 1rem;
         font-weight: inherit;
         line-height: 1.65;
+        letter-spacing: 0;
+        word-spacing: normal;
         color: var(--global-text-color);
       }
     }
