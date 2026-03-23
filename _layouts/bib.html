@@ -159,14 +159,25 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+          {%- assign paper_link = nil -%}
+          {%- if entry.paper -%}
+            {%- assign paper_link = entry.paper -%}
+          {%- elsif entry.url -%}
+            {%- assign paper_link = entry.url -%}
+          {%- elsif entry.arxiv -%}
+            {%- assign paper_link = entry.arxiv | prepend: 'http://arxiv.org/abs/' -%}
+          {%- elsif entry.pdf -%}
+            {% if entry.pdf contains '://' -%}
+              {%- assign paper_link = entry.pdf -%}
+            {%- else -%}
+              {%- assign paper_link = entry.pdf | prepend: '/assets/pdf/' | relative_url -%}
+            {%- endif %}
+          {%- endif %}
           {%- if entry.abstract %}
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
           {%- endif %}
-          {%- if entry.arxiv %}
-            <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
-          {%- endif %}
-          {%- if entry.url %}
-            <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+          {%- if paper_link %}
+            <a href="{{ paper_link }}" class="btn btn-sm z-depth-0" role="button">Paper</a>
           {%- endif %}
           {%- if entry.cds -%}
             <a href="{{ entry.cds }}" class="btn btn-sm z-depth-0" role="button">CDS</a>
@@ -209,7 +220,7 @@
             {%- endif %}
           {%- endif %}
           {%- if entry.website %}
-            <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+            <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Project</a>
           {%- endif %}
           {%- if entry.bibtex_show %}
             <a class="bibtex btn btn-sm z-depth-0" role="button">BibTeX</a>
