@@ -66,6 +66,35 @@ $(document).ready(function() {
         }, 1800);
     };
 
+    const formatBibtex = function(text) {
+        if (!text) {
+            return "";
+        }
+
+        const lines = text
+            .split("\n")
+            .map(function(line) { return line.trim(); })
+            .filter(function(line) { return line.length > 0; });
+
+        let indentLevel = 0;
+
+        return lines.map(function(line) {
+            if (line === "}" || line === "},") {
+                indentLevel = Math.max(0, indentLevel - 1);
+            }
+
+            const formattedLine = `${"  ".repeat(indentLevel)}${line}`;
+
+            if (line.startsWith("@")) {
+                indentLevel = 1;
+            } else if (line.endsWith("{") && !line.startsWith("@")) {
+                indentLevel += 1;
+            }
+
+            return formattedLine;
+        }).join("\n");
+    };
+
     const copyText = function(text, $trigger, copiedText) {
         const setCopiedState = function() {
             if ($trigger && $trigger.length) {
@@ -94,7 +123,7 @@ $(document).ready(function() {
 
     const openBibtexModal = function($container) {
         const rawText = $container.find(".bibtex-copy-source").val();
-        const text = rawText ? rawText.trim() : "";
+        const text = rawText ? formatBibtex(rawText.trim()) : "";
 
         if (!text) {
             return;
