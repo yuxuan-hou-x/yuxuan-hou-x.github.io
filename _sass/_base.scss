@@ -871,9 +871,13 @@ footer.sticky-bottom {
 
 .bibtex-modal-content {
   margin: 0;
-  background: #f3f4f6;
+  background: #f8fafc !important;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.bibtex-modal-content code {
+  background: transparent !important;
 }
 
 .bibtex-modal-actions {
