@@ -362,6 +362,11 @@ footer.fixed-bottom {
     padding-bottom: 8px;
   }
 
+  .footer-meta {
+    text-align: center;
+    white-space: nowrap;
+  }
+
   a {
     color: var(--global-footer-link-color);
 
@@ -379,6 +384,12 @@ footer.sticky-bottom {
   font-size: 0.8rem;
   text-align: center;
   color: var(--global-text-color);
+
+  .footer-meta {
+    text-align: center;
+    white-space: nowrap;
+  }
+
   a {
     color: var(--global-theme-color);
     &:hover {
