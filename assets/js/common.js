@@ -22,7 +22,8 @@ $(document).ready(function() {
     };
 
     const copyBibtexFromContainer = function($container, $trigger) {
-        const text = $container.find(".bibtex-copy-source").val()?.trim();
+        const rawText = $container.find(".bibtex-copy-source").val();
+        const text = rawText ? rawText.trim() : "";
 
         if (!text) {
             return;
