@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="title" content="CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence">
-  <meta name="description" content="Project page for CktGen, a paper on automated analog circuit design with generative artificial intelligence.">
-  <meta name="keywords" content="CktGen, analog circuit design, generative AI, EDA, circuit generator, test-time optimization">
+  <meta name="description" content="CktGen reformulates analog circuit synthesis as a specification-conditioned generation task, enabling direct circuit generation from arbitrary specifications without retraining.">
+  <meta name="keywords" content="CktGen, analog circuit design, generative AI, EDA, circuit generator, test-time optimization, specification-conditioned generation">
   <meta name="author" content="Yuxuan Hou, Hehe Fan, Jianrong Zhang, Yue Zhang, Hua Chen, Min Zhou, Faxin Yu, Roger Zimmermann, Yi Yang">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -14,10 +14,10 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Yuxuan Hou">
   <meta property="og:title" content="CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence">
-  <meta property="og:description" content="Project page for CktGen, hosted at yuxuan-hou-x.github.io/CktGen/.">
+  <meta property="og:description" content="CktGen reformulates analog circuit synthesis as a specification-conditioned generation task, enabling direct circuit generation from arbitrary specifications without retraining.">
   <meta property="og:url" content="https://yuxuan-hou-x.github.io/CktGen/">
-  <meta property="og:image" content="https://yuxuan-hou-x.github.io/assets/img/publication_preview/cktgen.png">
-  <meta property="og:image:alt" content="CktGen project preview">
+  <meta property="og:image" content="https://yuxuan-hou-x.github.io/CktGen/static/images/01-conditioned-generation.png">
+  <meta property="og:image:alt" content="CktGen framework overview">
 
   <meta name="citation_title" content="CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence">
   <meta name="citation_author" content="Hou, Yuxuan">
@@ -30,9 +30,11 @@
   <meta name="citation_author" content="Zimmermann, Roger">
   <meta name="citation_author" content="Yang, Yi">
   <meta name="citation_publication_date" content="2025">
+  <meta name="citation_journal_title" content="Engineering">
+  <meta name="citation_doi" content="10.1016/j.eng.2025.12.025">
 
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="theme-color" content="#0f4c5c">
+  <meta name="msapplication-TileColor" content="#0f4c5c">
 
   <title>CktGen | Project Page</title>
   <link rel="icon" href="data:,">
@@ -53,7 +55,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -66,7 +68,7 @@
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence",
-    "description": "Project page for CktGen, a paper on automated analog circuit design with generative artificial intelligence.",
+    "description": "CktGen reformulates analog circuit synthesis as a specification-conditioned generation task, enabling direct circuit generation from arbitrary specifications without retraining.",
     "author": [
       { "@type": "Person", "name": "Yuxuan Hou" },
       { "@type": "Person", "name": "Hehe Fan" },
@@ -78,14 +80,14 @@
       { "@type": "Person", "name": "Roger Zimmermann" },
       { "@type": "Person", "name": "Yi Yang" }
     ],
-    "datePublished": "2025-01-01",
+    "datePublished": "2025",
     "publisher": {
       "@type": "Organization",
       "name": "Engineering"
     },
     "url": "https://yuxuan-hou-x.github.io/CktGen/",
-    "image": "https://yuxuan-hou-x.github.io/assets/img/publication_preview/cktgen.png",
-    "keywords": ["CktGen", "analog circuit design", "generative AI", "EDA"],
+    "image": "https://yuxuan-hou-x.github.io/CktGen/static/images/01-conditioned-generation.png",
+    "keywords": ["CktGen", "analog circuit design", "generative AI", "EDA", "specification-conditioned generation"],
     "isAccessibleForFree": true
   }
   </script>
@@ -117,10 +119,18 @@
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
+        <a href="https://www.sciencedirect.com/science/article/pii/S2095809925008148" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>ScienceDirect</h5>
+            <p>Journal page with the final published article.</p>
+            <span class="work-venue">Engineering</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
         <a href="https://github.com/yuxuan-hou-x/CktGen" class="work-item" target="_blank">
           <div class="work-info">
             <h5>Code Repository</h5>
-            <p>Source code and implementation resources for CktGen.</p>
+            <p>Source code and implementation resources.</p>
             <span class="work-venue">GitHub</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
@@ -141,9 +151,13 @@
     <section class="hero publication-header">
       <div class="hero-body">
         <div class="container is-max-desktop">
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence</h1>
+          <div class="hero-shell">
+            <div class="hero-copy">
+              <div class="eyebrow">Engineering 2025 · Project Page</div>
+              <h1 class="publication-title">CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence</h1>
+              <p class="hero-lead">
+                CktGen reframes analog circuit synthesis as specification-conditioned generation. Instead of re-optimizing each new target from scratch, it learns to generate candidate circuits directly from desired specifications and then improves them at test time.
+              </p>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block"><a href="../">Yuxuan Hou</a>,</span>
@@ -157,100 +171,284 @@
                 <span class="author-block">Yi Yang</span>
               </div>
 
-              <div class="publication-venue">Engineering 2025</div>
+              <div class="publication-venue">Published in Engineering (中国工程院院刊), 2025</div>
 
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <span class="link-block">
-                    <a href="https://doi.org/10.1016/j.eng.2025.12.025" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://doi.org/10.1016/j.eng.2025.12.025" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://www.sciencedirect.com/science/article/pii/S2095809925008148" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-globe"></i></span>
+                    <span>ScienceDirect</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/yuxuan-hou-x/CktGen" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
 
-                  <span class="link-block">
-                    <a href="https://www.sciencedirect.com/science/article/pii/S2095809925008148" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-globe"></i>
-                      </span>
-                      <span>Publisher</span>
-                    </a>
-                  </span>
+              <div class="hero-jump-links">
+                <a href="#overview">Overview</a>
+                <a href="#method">Method</a>
+                <a href="#results">Results</a>
+                <a href="#design">Design Task</a>
+                <a href="#BibTeX">BibTeX</a>
+              </div>
+            </div>
 
-                  <span class="link-block">
-                    <a href="https://github.com/yuxuan-hou-x/CktGen" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="../" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-home"></i>
-                      </span>
-                      <span>Main Site</span>
-                    </a>
-                  </span>
+            <div class="hero-panel">
+              <div class="hero-panel-card">
+                <div class="mini-label">Why this matters</div>
+                <h3>From fixed-target optimization to specification-driven generation</h3>
+                <p>
+                  Real analog design rarely stays fixed. Specifications change across applications, and one valid target can map to multiple circuit realizations. CktGen is built for that regime.
+                </p>
+              </div>
+              <div class="hero-metrics">
+                <div class="metric-card">
+                  <span class="metric-value">47.57%</span>
+                  <span class="metric-label">Spec-Acc on Ckt-Bench-101</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">87.09%</span>
+                  <span class="metric-label">Spec-Acc on automated design</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">1 → many</span>
+                  <span class="metric-label">Specification-to-circuit mapping</span>
                 </div>
               </div>
-
-              <div class="publication-banner">
-                <img src="../assets/img/publication_preview/cktgen.png" alt="CktGen project preview">
-              </div>
-              <h2 class="subtitle has-text-centered">
-                A lightweight project page built with the Academic Project Page Template and deployed at <code>/CktGen/</code>.
-              </h2>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section hero is-light">
+    <section class="section spotlight-section" id="overview">
       <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                CktGen studies automated analog circuit design with generative artificial intelligence. This page is currently a clean project-page scaffold for the paper, and can later be expanded with your full abstract, method description, result figures, videos, and supplementary materials.
-              </p>
+        <div class="section-heading">
+          <span class="section-kicker">Overview</span>
+          <h2 class="title is-3">What CktGen changes</h2>
+          <p class="section-intro">
+            Most prior methods treat analog circuit synthesis as optimization under fixed objectives. CktGen instead asks a more flexible question: given target specifications, can we directly generate valid circuit candidates and continue optimizing them without retraining?
+          </p>
+        </div>
+
+        <div class="overview-grid">
+          <article class="story-card story-card-accent">
+            <span class="story-index">01</span>
+            <h3>Problem shift</h3>
+            <p>
+              Design targets such as gain, bandwidth, and phase margin vary across scenarios. CktGen reformulates synthesis as a specification-conditioned generation task rather than a single-objective search problem.
+            </p>
+          </article>
+          <article class="story-card">
+            <span class="story-index">02</span>
+            <h3>One-to-many generation</h3>
+            <p>
+              A single target specification can correspond to multiple valid implementations. The model learns a joint latent space that preserves this diversity instead of collapsing everything into one deterministic answer.
+            </p>
+          </article>
+          <article class="story-card">
+            <span class="story-index">03</span>
+            <h3>Generation plus optimization</h3>
+            <p>
+              CktGen first generates circuits from specifications, then performs test-time optimization with a multi-armed bandit strategy to search for higher-quality candidates under explicit constraints.
+            </p>
+          </article>
+        </div>
+
+        <div class="figure-frame figure-frame-large">
+          <img src="static/images/01-conditioned-generation.png" alt="CktGen framework overview: joint representation learning and test-time optimization">
+        </div>
+        <p class="figure-caption">
+          <strong>Figure 1.</strong> Overall framework of CktGen. The upper half learns a shared latent space across specifications and circuits. The lower half performs test-time optimization toward target specification thresholds.
+        </p>
+      </div>
+    </section>
+
+    <section class="section narrative-section">
+      <div class="container is-max-desktop">
+        <div class="narrative-shell">
+          <div class="narrative-copy">
+            <span class="section-kicker">At a glance</span>
+            <h2 class="title is-3">Why optimization alone is not enough</h2>
+            <p>
+              In practical analog design, the bottleneck is not only how fast a method can optimize, but whether it can adapt when the target specification changes. Existing methods often require extra search, manual redesign, or even retraining when facing new combinations of constraints.
+            </p>
+            <p>
+              CktGen is designed for a more realistic regime: specification changes are expected, and multiple circuit realizations may satisfy the same target. That is why the method is built around cross-modal alignment and controllable generation rather than around a single fixed objective.
+            </p>
+          </div>
+          <div class="narrative-points">
+            <div class="point-card">
+              <h3>Flexible targets</h3>
+              <p>Works with changing specifications instead of assuming one static design goal.</p>
+            </div>
+            <div class="point-card">
+              <h3>Structured latent space</h3>
+              <p>Aligns circuit representations and specification representations in a shared space.</p>
+            </div>
+            <div class="point-card">
+              <h3>Practical deployment</h3>
+              <p>Supports search and refinement at inference time without training a new model.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3">Overview</h2>
-        <p>
-          The page now follows the structure and styling of the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. I kept the content minimal on purpose so you can replace it incrementally without changing the final URL.
-        </p>
-        <p>
-          Good next sections to add here are a method overview, key results, visual comparisons, demo videos, and downloadable artifacts such as slides or posters.
+    <section class="section" id="method">
+      <div class="container is-max-desktop">
+        <div class="section-heading">
+          <span class="section-kicker">Method</span>
+          <h2 class="title is-3">A pipeline built for controllable analog circuit generation</h2>
+          <p class="section-intro">
+            The model combines circuit encoding, specification encoding, latent alignment, and autoregressive decoding. The key objective is not just to generate plausible circuits, but to make generated circuits stay consistent with the requested specifications.
+          </p>
+        </div>
+
+        <div class="method-grid">
+          <article class="method-card">
+            <div class="method-number">1</div>
+            <h3>Dual encoders</h3>
+            <p>
+              A Transformer-based VAE encodes circuit structure, while an MLP encodes target specifications. Both branches map into a shared latent representation.
+            </p>
+          </article>
+          <article class="method-card">
+            <div class="method-number">2</div>
+            <h3>Triple alignment</h3>
+            <p>
+              Contrastive learning, classifier guidance, and feature alignment work together to organize the latent space so that paired circuits and specifications stay coherent while diversity is preserved.
+            </p>
+          </article>
+          <article class="method-card">
+            <div class="method-number">3</div>
+            <h3>Autoregressive generation</h3>
+            <p>
+              A GPT-style decoder generates node types, topology, device parameters, and edges step by step, turning specification embeddings into concrete circuit candidates.
+            </p>
+          </article>
+        </div>
+
+        <div class="figure-frame">
+          <img src="static/images/02-cktgen-architecture.png" alt="CktGen architecture">
+        </div>
+        <p class="figure-caption">
+          <strong>Figure 2.</strong> CktGen architecture. The model contains a circuit encoder, a specification encoder, a shared latent alignment module, and an autoregressive decoder for circuit generation.
         </p>
       </div>
     </section>
 
-    <section class="section hero is-light">
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3">Resources</h2>
-        <ul>
-          <li><a href="https://doi.org/10.1016/j.eng.2025.12.025" target="_blank">Paper DOI</a></li>
-          <li><a href="https://www.sciencedirect.com/science/article/pii/S2095809925008148" target="_blank">ScienceDirect page</a></li>
-          <li><a href="https://github.com/yuxuan-hou-x/CktGen" target="_blank">Code repository</a></li>
-          <li><a href="../" target="_self">Main personal homepage</a></li>
-        </ul>
+    <section class="section hero is-light" id="results">
+      <div class="container is-max-desktop">
+        <div class="section-heading">
+          <span class="section-kicker">Results</span>
+          <h2 class="title is-3">The key question is not whether circuits look valid, but whether they match the target</h2>
+          <p class="section-intro">
+            CktGen is evaluated on Ckt-Bench-101 and Ckt-Bench-301 from the Open Circuit Benchmark. The main signal is specification accuracy: whether the generated circuit actually satisfies the requested performance target.
+          </p>
+        </div>
+
+        <div class="results-callouts">
+          <div class="result-highlight">
+            <span class="result-value">47.57%</span>
+            <span class="result-text">Spec-Acc on Ckt-Bench-101, while all baselines stay below 3%.</span>
+          </div>
+          <div class="result-highlight">
+            <span class="result-value">22.64%</span>
+            <span class="result-text">Spec-Acc on Ckt-Bench-301 with strong FID and structural validity.</span>
+          </div>
+        </div>
+
+        <div class="figure-split">
+          <div class="figure-frame compact-frame">
+            <img src="static/images/101.png" alt="Quantitative results on Ckt-Bench-101">
+          </div>
+          <div class="figure-frame compact-frame">
+            <img src="static/images/301.png" alt="Quantitative results on Ckt-Bench-301">
+          </div>
+        </div>
+        <p class="figure-caption">
+          <strong>Tables 2 and 3.</strong> Quantitative results on specification-conditioned generation. CktGen substantially improves specification accuracy while keeping strong generation quality and structural validity.
+        </p>
+
+        <div class="tsne-layout">
+          <div class="tsne-copy">
+            <h3>Why the latent space matters</h3>
+            <p>
+              The learned latent space is not just a hidden representation. It is the core mechanism that makes specification-conditioned generation practical. CktGen forms compact within-class clusters and clearer between-class separation, which supports controllable retrieval, generation, and optimization.
+            </p>
+          </div>
+          <div class="figure-frame compact-frame">
+            <img src="static/images/03-tsne.png" alt="t-SNE visualization of latent space representations">
+          </div>
+        </div>
+        <p class="figure-caption">
+          <strong>Figure 3.</strong> t-SNE visualization of latent space representations. CktGen produces cleaner class separation and tighter grouping than the compared baselines.
+        </p>
       </div>
     </section>
 
-    <section class="section" id="BibTeX">
+    <section class="section" id="design">
+      <div class="container is-max-desktop">
+        <div class="section-heading">
+          <span class="section-kicker">Automated Design</span>
+          <h2 class="title is-3">From generation to practical target-driven design</h2>
+          <p class="section-intro">
+            Beyond conditional generation, CktGen addresses a more realistic setting: given target thresholds such as gain, bandwidth, and phase margin, generate circuits that satisfy all constraints and continue searching for higher FoM designs.
+          </p>
+        </div>
+
+        <div class="design-grid">
+          <div class="design-copy">
+            <p>
+              At inference time, CktGen first identifies feasible specification regions in the latent space. If the requested target falls outside the supported distribution, the framework explicitly treats it as out of domain rather than returning misleading candidates.
+            </p>
+            <p>
+              For valid targets, a multi-armed bandit strategy explores candidate regions and pushes the search toward stronger designs without retraining the model. This extends CktGen from a generator into a design tool.
+            </p>
+            <div class="design-badges">
+              <span>87.09% Spec-Acc on Ckt-Bench-101</span>
+              <span>85.07% Spec-Acc on Ckt-Bench-301</span>
+              <span>No retraining during optimization</span>
+            </div>
+          </div>
+          <div class="figure-frame compact-frame">
+            <img src="static/images/04-auto-design-results.png" alt="Automated design results">
+          </div>
+        </div>
+        <p class="figure-caption">
+          <strong>Figure 4.</strong> Automated design results under target constraints. CktGen reaches the highest specification accuracy on both datasets while keeping competitive FoM.
+        </p>
+      </div>
+    </section>
+
+    <section class="section hero is-light takeaway-section">
+      <div class="container is-max-desktop">
+        <div class="takeaway-card">
+          <span class="section-kicker">Takeaway</span>
+          <h2 class="title is-3">A new framing for analog circuit synthesis</h2>
+          <p>
+            CktGen shows that analog circuit design can be approached as specification-conditioned generation rather than repeated fixed-target optimization. By aligning specifications and circuits in a shared latent space, it supports diverse generation, target-aware decoding, and test-time optimization in a unified pipeline.
+          </p>
+          <div class="takeaway-links">
+            <a href="https://doi.org/10.1016/j.eng.2025.12.025" target="_blank">Read the paper</a>
+            <a href="https://github.com/yuxuan-hou-x/CktGen" target="_blank">Browse the code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="BibTeX">
       <div class="container is-max-desktop content">
         <div class="bibtex-header">
           <h2 class="title">BibTeX</h2>
@@ -275,9 +473,9 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-          <div class="content">
+          <div class="content has-text-centered">
             <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              Built for the CktGen project page using the final Engineering paper materials and project assets.
             </p>
           </div>
         </div>
