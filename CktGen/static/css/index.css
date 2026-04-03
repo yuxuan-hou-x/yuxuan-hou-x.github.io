@@ -216,6 +216,92 @@ body {
   box-shadow: var(--shadow-xl);
 }
 
+/* Project Video Showcase */
+.video-showcase {
+  padding: 0.5rem 0;
+}
+
+.video-showcase__header {
+  margin: 0 auto 2rem;
+  max-width: 760px;
+}
+
+.video-showcase__lede {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+.video-showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 1.25rem;
+}
+
+.video-card__topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.video-card__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.video-card__meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.video-card__title {
+  color: var(--text-primary);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 0.65rem;
+}
+
+.video-card__description {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.video-frame {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  background: #000;
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Modern Video and Carousel Styling */
 .publication-video {
     position: relative;
@@ -519,6 +605,22 @@ code {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 768px) {
+  .video-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    padding: 1rem;
+  }
+
+  .video-card__topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 .dropdown-header {
   display: flex;
   justify-content: space-between;
@@ -748,6 +850,5 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
 
 

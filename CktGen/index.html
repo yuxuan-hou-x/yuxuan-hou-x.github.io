@@ -221,6 +221,53 @@
 
     <section class="section hero is-light">
       <div class="container is-max-desktop">
+        <div class="video-showcase">
+          <div class="video-showcase__header has-text-centered">
+            <h2 class="title is-3">Presentation Videos</h2>
+            <p class="video-showcase__lede">
+              Two complementary cuts of CktGen: a short narrative overview for the full story, and a longer walkthrough for the model internals.
+            </p>
+          </div>
+
+          <div class="video-showcase__grid">
+            <article class="video-card">
+              <div class="video-card__topline">
+                <span class="video-card__tag">Story Cut</span>
+                <span class="video-card__meta">41.8s</span>
+              </div>
+              <h3 class="video-card__title">Intro Overview</h3>
+              <p class="video-card__description">
+                A compact walkthrough of the full pipeline, from specification-conditioned generation to test-time optimization.
+              </p>
+              <div class="video-frame">
+                <video controls playsinline preload="metadata" poster="static/images/01-conditioned-generation.png">
+                  <source src="static/videos/intro.mp4" type="video/mp4">
+                </video>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div class="video-card__topline">
+                <span class="video-card__tag">Model Cut</span>
+                <span class="video-card__meta">76.5s</span>
+              </div>
+              <h3 class="video-card__title">Architecture Walkthrough</h3>
+              <p class="video-card__description">
+                A step-by-step view of the circuit encoder, specification encoder, latent alignment, and autoregressive generator.
+              </p>
+              <div class="video-frame">
+                <video controls playsinline preload="metadata" poster="static/images/02-cktgen-architecture.png">
+                  <source src="static/videos/model.mp4" type="video/mp4">
+                </video>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Abstract</h2>
