@@ -153,22 +153,32 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence</h1>
+              <h1 class="title is-1 publication-title">
+                <span class="publication-title__line">CktGen: Automated Analog Circuit Design</span>
+                <span class="publication-title__line">with Generative Artificial Intelligence</span>
+              </h1>
+
+              <p class="publication-venue">Engineering 2025</p>
 
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><a href="../">Yuxuan Hou</a>,</span>
-                <span class="author-block">Hehe Fan,</span>
-                <span class="author-block">Jianrong Zhang,</span>
-                <span class="author-block">Yue Zhang,</span>
-                <span class="author-block">Hua Chen,</span>
-                <span class="author-block">Min Zhou,</span>
-                <span class="author-block">Faxin Yu,</span>
-                <span class="author-block">Roger Zimmermann,</span>
-                <span class="author-block">Yi Yang</span>
+                <div class="publication-authors__row">
+                  <span class="author-block"><a href="../">Yuxuan Hou</a>,</span>
+                  <span class="author-block">Hehe Fan,</span>
+                  <span class="author-block">Jianrong Zhang,</span>
+                  <span class="author-block">Yue Zhang,</span>
+                  <span class="author-block">Hua Chen,</span>
+                  <span class="author-block">Min Zhou,</span>
+                </div>
+                <div class="publication-authors__row">
+                  <span class="author-block">Faxin Yu,</span>
+                  <span class="author-block">Roger Zimmermann,</span>
+                  <span class="author-block">Yi Yang</span>
+                </div>
               </div>
 
-              <div class="publication-venue">Published in <em>Engineering</em>, 2025</div>
-              <div class="publication-venue">A collaboration between Zhejiang University, the University of Technology Sydney, and the National University of Singapore.</div>
+              <div class="publication-meta-stack">
+                <p class="publication-meta-line publication-meta-line--secondary">Zhejiang University · University of Technology Sydney · National University of Singapore</p>
+              </div>
 
               <div class="column has-text-centered">
                 <div class="publication-links">
@@ -202,65 +212,14 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">TL;DR</h2>
-            <div class="content has-text-justified">
-              <p>
-                <strong>Spec2Ckt</strong>: CktGen reframes analog circuit synthesis as a <em>specification-conditioned generation task</em>. Instead of relying only on repeated fixed-target optimization whenever the target Spec changes, it first generates candidate circuits from the desired Spec and then refines them with test-time optimization, without retraining for every new requirement.
-              </p>
+            <div class="publication-banner publication-banner--video">
+              <video controls muted playsinline preload="metadata" data-autoplay="in-view" poster="static/images/intro-poster.png" width="1920" height="1080">
+                <source src="static/videos/intro.mp4" type="video/mp4">
+              </video>
             </div>
-            <div class="publication-banner">
-              <img src="static/images/01-conditioned-generation.png" alt="CktGen framework overview">
-            </div>
-            <p class="has-text-grey" style="margin-top: 1rem; font-size: 0.95rem;">
-              <strong>Figure 1.</strong> CktGen framework. Top: joint representation learning aligns specifications and circuits in a shared latent space. Bottom: test-time optimization searches for high-quality circuits under target constraints.
+            <p class="section-intro-note">
+              A quick introduction to CktGen, from specification-conditioned generation to test-time optimization under target constraints.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <div class="video-showcase">
-          <div class="video-showcase__header has-text-centered">
-            <h2 class="title is-3">Presentation Videos</h2>
-            <p class="video-showcase__lede">
-              Two complementary cuts of CktGen: a short narrative overview for the full story, and a longer walkthrough for the model internals.
-            </p>
-          </div>
-
-          <div class="video-showcase__grid">
-            <article class="video-card">
-              <div class="video-card__topline">
-                <span class="video-card__tag">Story Cut</span>
-                <span class="video-card__meta">41.8s</span>
-              </div>
-              <h3 class="video-card__title">Intro Overview</h3>
-              <p class="video-card__description">
-                A compact walkthrough of the full pipeline, from specification-conditioned generation to test-time optimization.
-              </p>
-              <div class="video-frame">
-                <video controls playsinline preload="metadata" poster="static/images/01-conditioned-generation.png">
-                  <source src="static/videos/intro.mp4" type="video/mp4">
-                </video>
-              </div>
-            </article>
-
-            <article class="video-card">
-              <div class="video-card__topline">
-                <span class="video-card__tag">Model Cut</span>
-                <span class="video-card__meta">76.5s</span>
-              </div>
-              <h3 class="video-card__title">Architecture Walkthrough</h3>
-              <p class="video-card__description">
-                A step-by-step view of the circuit encoder, specification encoder, latent alignment, and autoregressive generator.
-              </p>
-              <div class="video-frame">
-                <video controls playsinline preload="metadata" poster="static/images/02-cktgen-architecture.png">
-                  <source src="static/videos/model.mp4" type="video/mp4">
-                </video>
-              </div>
-            </article>
           </div>
         </div>
       </div>
@@ -281,27 +240,14 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3">Overview</h2>
-        <p>
-          The core motivation behind CktGen is that analog design targets are not fixed. Gain, bandwidth, and phase margin vary across applications, and the same Spec may correspond to multiple valid circuit implementations. This makes a purely optimization-based view unnecessarily restrictive.
-        </p>
-        <p>
-          CktGen therefore treats circuit synthesis as conditional generation: given a target Spec, the model directly generates candidate circuits. Instead of attaching Specs as weak side information, it explicitly aligns Spec representations and circuit representations in a shared latent space so that generated outputs remain tied to the requested design goals.
-        </p>
-        <p>
-          This is not a claim about arbitrary out-of-distribution Specs. The key point is that, within the learned design space, CktGen no longer treats every new target as an entirely separate from-scratch optimization problem. It first generates candidates conditioned on the target Spec and then continues searching for better solutions at test time.
-        </p>
-        <p>
-          On top of generation, CktGen also performs test-time optimization. Once feasible latent regions are identified for a target Spec, a multi-armed bandit strategy explores promising candidates and improves their FoM while maintaining Spec satisfaction.
-        </p>
-      </div>
-    </section>
-
     <section class="section hero is-light">
       <div class="container is-max-desktop content">
         <h2 class="title is-3">Method</h2>
+        <div class="publication-banner publication-banner--video method-video">
+          <video controls muted playsinline preload="metadata" data-autoplay="in-view" poster="static/images/model-poster.png" width="1920" height="1080">
+            <source src="static/videos/model.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="content has-text-justified">
           <p>
             CktGen combines a Transformer-based circuit encoder, a Spec encoder, cross-modal latent alignment, and an autoregressive decoder into one conditional generative framework.
@@ -316,18 +262,13 @@
             During inference, the autoregressive decoder generates node types, topology, device parameters, and edges step by step from Spec-conditioned latent variables. In other words, the target Spec is not used only for post-hoc filtering; it directly drives generation from the beginning.
           </p>
         </div>
-        <div class="has-text-centered">
-          <img src="static/images/02-cktgen-architecture.png" alt="CktGen architecture" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
-          <p class="has-text-grey" style="margin-top: 1rem; font-size: 0.95rem;">
-            <strong>Figure 2.</strong> CktGen architecture, including the circuit encoder, specification encoder, latent alignment module, and autoregressive circuit generator.
-          </p>
-        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container is-max-desktop content">
-        <h2 class="title is-3">Specification-Conditioned Generation Results</h2>
+        <h2 class="title is-3">Results</h2>
+        <h3 class="results-subsection-title">Specification-Conditioned Generation</h3>
         <div class="content has-text-justified">
           <p>
             CktGen is evaluated on two Open Circuit Benchmark datasets, <strong>Ckt-Bench-101</strong> and <strong>Ckt-Bench-301</strong>. The most important metric is <strong>Spec-Acc</strong>, which measures whether generated circuits actually satisfy the requested Specs.
@@ -354,12 +295,7 @@
             <strong>Figure 3.</strong> t-SNE visualization of the learned latent space. CktGen shows clearer inter-class separation and tighter intra-class grouping.
           </p>
         </div>
-      </div>
-    </section>
-
-    <section class="section hero is-light">
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3">Automated Design with Target Specifications</h2>
+        <h3 class="results-subsection-title">Automated Design with Target Specifications</h3>
         <div class="content has-text-justified">
           <p>
             Beyond conditional generation, CktGen also addresses a more practical design setting: given target thresholds such as gain, bandwidth, and phase margin, automatically generate circuits that satisfy all constraints and continue searching for better FoM.

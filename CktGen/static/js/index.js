@@ -119,6 +119,37 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function setupInViewVideoAutoplay() {
+    const pageVideos = document.querySelectorAll('video[data-autoplay="in-view"]');
+
+    if (pageVideos.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                if (video.ended) {
+                    video.currentTime = 0;
+                }
+                video.play().catch(error => {
+                    console.log('In-view autoplay prevented:', error);
+                });
+            } else {
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.6,
+        rootMargin: '0px 0px -8% 0px'
+    });
+
+    pageVideos.forEach(video => {
+        video.muted = true;
+        observer.observe(video);
+    });
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -138,5 +169,8 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+
+    // Autoplay page videos when they enter the viewport
+    setupInViewVideoAutoplay();
 
 })
