@@ -82,6 +82,26 @@ body {
     margin: 0;
 }
 
+.publication-links .icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.publication-links .icon .ai {
+  color: currentColor;
+  font-size: 1.08rem;
+}
+
+.publication-links .icon--emoji {
+  line-height: 1;
+}
+
+.publication-links .emoji-icon {
+  display: block;
+  font-size: 1.02rem;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
@@ -250,6 +270,18 @@ body {
 
 .method-video {
   margin-bottom: 1.5rem;
+}
+
+.paper-figure {
+  display: block;
+  width: 80%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paper-figure-stack .paper-figure + .paper-figure {
+  margin-top: 0;
 }
 
 .results-subsection-title {
@@ -849,6 +881,11 @@ code {
   .section-intro-note {
     font-size: 0.95rem;
     line-height: 1.65;
+  }
+
+  .paper-figure {
+    width: 100%;
+    max-width: 100%;
   }
 
   .results-subsection-title {

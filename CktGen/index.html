@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="title" content="CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence">
-  <meta name="description" content="CktGen reframes analog circuit synthesis as specification-conditioned generation: instead of treating each new target as a fresh optimization problem, it learns to generate candidate circuits from target specifications and refine them with test-time optimization.">
+  <meta name="description" content="CktGen: the first to formulate analog circuit synthesis as Spec-conditioned generation (Spec2Ckt). Generates circuits directly from target Specs with test-time optimization — 47.57% Spec-Acc vs. baselines below 3%, up to 87.09% in automated design.">
   <meta name="keywords" content="CktGen, analog circuit design, generative AI, EDA, circuit generator, test-time optimization, specification-conditioned generation">
   <meta name="author" content="Yuxuan Hou, Hehe Fan, Jianrong Zhang, Yue Zhang, Hua Chen, Min Zhou, Faxin Yu, Roger Zimmermann, Yi Yang">
   <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Yuxuan Hou">
   <meta property="og:title" content="CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence">
-  <meta property="og:description" content="CktGen reframes analog circuit synthesis as specification-conditioned generation: instead of treating each new target as a fresh optimization problem, it learns to generate candidate circuits from target specifications and refine them with test-time optimization.">
+  <meta property="og:description" content="CktGen: the first to formulate analog circuit synthesis as Spec-conditioned generation (Spec2Ckt). Generates circuits directly from target Specs with test-time optimization — 47.57% Spec-Acc vs. baselines below 3%, up to 87.09% in automated design.">
   <meta property="og:url" content="https://yuxuan-hou-x.github.io/CktGen/">
   <meta property="og:image" content="https://yuxuan-hou-x.github.io/CktGen/static/images/01-conditioned-generation.png">
   <meta property="og:image:alt" content="CktGen framework overview">
@@ -68,7 +68,7 @@
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "CktGen: Automated Analog Circuit Design with Generative Artificial Intelligence",
-    "description": "CktGen reframes analog circuit synthesis as specification-conditioned generation: instead of treating each new target as a fresh optimization problem, it learns to generate candidate circuits from target specifications and refine them with test-time optimization.",
+    "description": "CktGen: the first to formulate analog circuit synthesis as Spec-conditioned generation (Spec2Ckt). Generates circuits directly from target Specs with test-time optimization. 47.57% Spec-Acc vs. baselines below 3%, up to 87.09% in automated design.",
     "author": [
       { "@type": "Person", "name": "Yuxuan Hou" },
       { "@type": "Person", "name": "Hehe Fan" },
@@ -114,7 +114,7 @@
         <a href="https://arxiv.org/abs/2410.00995" class="work-item" target="_blank">
           <div class="work-info">
             <h5>arXiv Paper</h5>
-            <p>Open-access preprint of the CktGen paper.</p>
+            <p>Open-access preprint introducing specification-conditioned analog circuit generation.</p>
             <span class="work-venue">arXiv</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
@@ -122,7 +122,7 @@
         <a href="https://www.sciencedirect.com/science/article/pii/S2095809925008148" class="work-item" target="_blank">
           <div class="work-info">
             <h5>Engineering Version</h5>
-            <p>Published journal version in Engineering.</p>
+            <p>Journal version with the full framework, experiments, and test-time optimization results.</p>
             <span class="work-venue">Engineering 2025</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
@@ -130,7 +130,7 @@
         <a href="https://github.com/yuxuan-hou-x/CktGen" class="work-item" target="_blank">
           <div class="work-info">
             <h5>Code Repository</h5>
-            <p>Source code and implementation resources.</p>
+            <p>Training, generation, and evaluation code for CktGen.</p>
             <span class="work-venue">GitHub</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
@@ -184,14 +184,22 @@
                 <div class="publication-links">
                   <span class="link-block">
                     <a href="https://arxiv.org/abs/2410.00995" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
                       <span>arXiv</span>
                     </a>
                   </span>
                   <span class="link-block">
                     <a href="https://www.sciencedirect.com/science/article/pii/S2095809925008148" target="_blank" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-globe"></i></span>
-                      <span>Engineering</span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/Yuxuan-Hou/CktGen" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon icon--emoji" aria-hidden="true">
+                        <span class="emoji-icon">🤗</span>
+                      </span>
+                      <span>Model</span>
                     </a>
                   </span>
                   <span class="link-block">
@@ -218,7 +226,7 @@
               </video>
             </div>
             <p class="section-intro-note">
-              A quick introduction to CktGen, from specification-conditioned generation to test-time optimization under target constraints.
+              Every time the target Spec changes, most methods start over. <strong>CktGen</strong> doesn't — it generates circuits directly from the new requirements, then optimizes without retraining.
             </p>
           </div>
         </div>
@@ -232,7 +240,15 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Automated analog circuit synthesis remains challenging because Specs vary across applications, while the same target Spec may still correspond to multiple valid circuit realizations. Most prior methods formulate synthesis as fixed-target optimization, which makes adaptation cumbersome when design requirements change. CktGen addresses this limitation by recasting analog circuit synthesis as a specification-conditioned generation problem. It learns a shared latent space for circuits and Specs, explicitly models the one-to-many mapping from Spec to circuit, and combines conditional generation with test-time optimization without retraining for every new requirement. Experiments on Open Circuit Benchmark datasets show substantial gains in Spec-Acc and strong performance on a more practical automated design setting under target constraints.
+                Existing analog circuit automation methods treat every new target Spec as an independent optimization problem — when requirements change, the process restarts from scratch. <strong>CktGen</strong> takes a fundamentally different approach: it redefines analog circuit synthesis as <strong>Spec-conditioned generation (Spec2Ckt)</strong> — given a target Spec, directly generate the corresponding circuit. Three key contributions:
+              </p>
+              <ul>
+                <li><strong>New problem formulation.</strong> We are the first to formulate analog circuit synthesis as Spec-conditioned generation, moving beyond repeated fixed-target optimization.</li>
+                <li><strong>One-to-many Spec-to-circuit mapping.</strong> We learn the inherent one-to-many relationship between Specs and valid circuits through joint latent space alignment with triple alignment mechanisms.</li>
+                <li><strong>Test-time optimization without retraining.</strong> After generation, <strong>CktGen</strong> continues searching for better designs under new target constraints — no retraining required.</li>
+              </ul>
+              <p>
+                On Open Circuit Benchmark, <strong>CktGen</strong> achieves <strong>47.57%</strong> Spec-Acc on Ckt-Bench-101 where all baselines stay below <strong>3%</strong>, and reaches up to <strong>87.09%</strong> Spec-Acc in automated design.
               </p>
             </div>
           </div>
@@ -250,16 +266,10 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            CktGen combines a Transformer-based circuit encoder, a Spec encoder, cross-modal latent alignment, and an autoregressive decoder into one conditional generative framework.
+            The central challenge is that Spec-to-circuit is inherently <strong>one-to-many</strong>: the same Spec can correspond to multiple valid designs. Naively conditioning on Spec collapses this diversity and only learns an "average answer." <strong>CktGen</strong> solves this by mapping Specs and circuits into a <strong>jointly aligned latent space</strong> through triple alignment (contrastive learning + classifier guidance + feature alignment), preserving design diversity while ensuring Spec-circuit correspondence. An autoregressive decoder then generates complete circuits — topology, parameters, and connections — directly conditioned on the target Spec from the first token.
           </p>
           <p>
-            The method starts by mapping circuits and Specs into the same latent space. Because a single Spec can correspond to multiple valid realizations, the model decouples circuit encoding and Spec encoding, then aligns their latent representations instead of collapsing them into a simple one-to-one mapping.
-          </p>
-          <p>
-            To organize this shared space, CktGen adds three mechanisms on top of variational learning: contrastive training for better class separation, classifier guidance to ensure that Spec information is truly encoded, and feature alignment to pull paired Spec and circuit representations closer together.
-          </p>
-          <p>
-            During inference, the autoregressive decoder generates node types, topology, device parameters, and edges step by step from Spec-conditioned latent variables. In other words, the target Spec is not used only for post-hoc filtering; it directly drives generation from the beginning.
+            Beyond generation, <strong>CktGen</strong> introduces <strong>test-time optimization</strong>: a multi-armed bandit algorithm searches the learned latent space for designs that satisfy target Spec constraints while maximizing FoM — without retraining the model.
           </p>
         </div>
       </div>
@@ -271,46 +281,37 @@
         <h3 class="results-subsection-title">Specification-Conditioned Generation</h3>
         <div class="content has-text-justified">
           <p>
-            CktGen is evaluated on two Open Circuit Benchmark datasets, <strong>Ckt-Bench-101</strong> and <strong>Ckt-Bench-301</strong>. The most important metric is <strong>Spec-Acc</strong>, which measures whether generated circuits actually satisfy the requested Specs.
-          </p>
-          <p>
-            On Ckt-Bench-101, CktGen achieves <strong>47.57%</strong> Spec-Acc while all compared baselines remain below <strong>3%</strong>. On Ckt-Bench-301, it reaches <strong>22.64%</strong> Spec-Acc together with strong FID and structural validity. The key distinction is not only whether the model generates plausible circuits, but whether it generates circuits that match the requested Spec.
+            The key metric is <strong>Spec-Acc</strong>: does the generated circuit actually satisfy the target Spec? On Ckt-Bench-101, <strong>CktGen</strong> achieves <strong>47.57%</strong> Spec-Acc — all baselines stay below <strong>3%</strong>. On Ckt-Bench-301, it reaches <strong>22.64%</strong> with strong FID and structural validity. Baselines can produce circuits that look plausible in aggregate (reasonable FID), but fail when the task requires generating a circuit that matches a <em>specific</em> target Spec. This gap reflects a qualitative difference: <strong>CktGen</strong> is the first method that demonstrates controllable, Spec-conditioned analog circuit generation.
           </p>
         </div>
-        <div class="has-text-centered" style="margin-bottom: 2rem;">
-          <img src="static/images/101.png" alt="Quantitative results on Ckt-Bench-101" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 1.5rem;">
-          <img src="static/images/301.png" alt="Quantitative results on Ckt-Bench-301" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
+        <div class="has-text-centered paper-figure-stack" style="margin-bottom: 2rem;">
+          <img class="paper-figure" src="static/images/101.png" alt="Quantitative results on Ckt-Bench-101" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 1.5rem;">
+          <img class="paper-figure" src="static/images/301.png" alt="Quantitative results on Ckt-Bench-301" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
           <p class="has-text-grey" style="margin-top: 1rem; font-size: 0.95rem;">
             <strong>Tables 2 and 3.</strong> Quantitative results on specification-conditioned generation for Ckt-Bench-101 and Ckt-Bench-301.
           </p>
         </div>
         <div class="content has-text-justified">
           <p>
-            The t-SNE visualization of the latent space is consistent with the quantitative results. CktGen forms clearer class separation and more compact clustering than the baselines, indicating that the shared latent space captures a more structured correspondence from Spec to circuit while preserving diversity within each class.
+            The t-SNE visualization further supports this: <strong>CktGen</strong> learns a structured design space organized by Spec, with clear inter-class separation and tight intra-class clustering. This indicates the model captures meaningful Spec-circuit correspondence rather than memorizing individual samples.
           </p>
         </div>
         <div class="has-text-centered">
-          <img src="static/images/03-tsne.png" alt="t-SNE visualization of latent space representations" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
+          <img class="paper-figure" src="static/images/03-tsne.png" alt="t-SNE visualization of latent space representations" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
           <p class="has-text-grey" style="margin-top: 1rem; font-size: 0.95rem;">
-            <strong>Figure 3.</strong> t-SNE visualization of the learned latent space. CktGen shows clearer inter-class separation and tighter intra-class grouping.
+            <strong>Figure 3.</strong> t-SNE visualization of the learned latent space. <strong>CktGen</strong> shows clearer inter-class separation and tighter intra-class grouping.
           </p>
         </div>
         <h3 class="results-subsection-title">Automated Design with Target Specifications</h3>
         <div class="content has-text-justified">
           <p>
-            Beyond conditional generation, CktGen also addresses a more practical design setting: given target thresholds such as gain, bandwidth, and phase margin, automatically generate circuits that satisfy all constraints and continue searching for better FoM.
-          </p>
-          <p>
-            The process first identifies feasible joint Spec regions in latent space. If no valid region can be found, the requested target lies outside the learned data coverage rather than being answered with an overconfident circuit. For valid targets, a multi-armed bandit strategy performs test-time optimization by iteratively sampling latent codes, generating circuits, and updating the search toward better candidates.
-          </p>
-          <p>
-            Under this setting, CktGen achieves <strong>87.09%</strong> and <strong>85.07%</strong> Spec-Acc on Ckt-Bench-101 and Ckt-Bench-301, respectively, while maintaining competitive FoM. This extends the framework from conditional generation to a more practical design pipeline driven by target Specs.
+            Beyond conditioned generation, we evaluate a more practical setting closer to real design: given target Spec thresholds (gain, bandwidth, phase margin), generate circuits that satisfy all constraints while maximizing overall FoM. <strong>CktGen</strong> achieves <strong>87.09%</strong> and <strong>85.07%</strong> Spec-Acc on Ckt-Bench-101 and Ckt-Bench-301, with competitive FoM. Crucially, the test-time optimization adapts to new target Specs directly — <strong>no retraining required</strong>.
           </p>
         </div>
         <div class="has-text-centered">
-          <img src="static/images/04-auto-design-results.png" alt="Automated design results" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
+          <img class="paper-figure" src="static/images/04-auto-design-results.png" alt="Automated design results" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
           <p class="has-text-grey" style="margin-top: 1rem; font-size: 0.95rem;">
-            <strong>Figure 4.</strong> Automated design results under target specification constraints. CktGen reaches the highest specification accuracy on both datasets while keeping competitive FoM.
+            <strong>Figure 4.</strong> Automated design results under target specification constraints. <strong>CktGen</strong> reaches the highest specification accuracy on both datasets while keeping competitive FoM.
           </p>
         </div>
       </div>
