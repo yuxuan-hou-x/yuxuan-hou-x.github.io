@@ -145,6 +145,15 @@ blockquote {
   margin-right: 1rem;
 }
 
+.post:not(.post-with-profile-image) {
+  .profile {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;

@@ -3,7 +3,18 @@ layout: default
 ---
 
 <!-- about.html -->
-<div class="post">
+{% assign has_profile_image = false %}
+{% assign profile_image_path = nil %}
+{% if page.profile and page.profile.image %}
+  {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+  {% assign profile_image_static_path = profile_image_path | prepend: '/' %}
+  {% assign profile_image_file = site.static_files | where: "path", profile_image_static_path | first %}
+  {% if profile_image_file %}
+    {% assign has_profile_image = true %}
+  {% endif %}
+{% endif %}
+
+<div class="post{% if has_profile_image %} post-with-profile-image{% endif %}">
   <header class="about-header">
     <h1 class="about-title">
       {% if site.title == "blank" -%} {{ site.first_name }} {{ site.middle_name }} <span class="font-weight-bold">{{ site.last_name }}</span>{%- else -%}{{ site.title }}{%- endif %}
@@ -12,11 +23,9 @@ layout: default
   </header>
 
   <article>
-    {% if page.profile -%}
+    {% if page.profile and (has_profile_image or page.profile.address) -%}
       <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-        {%- if page.profile.image %}
-          {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
-      
+        {%- if has_profile_image %}
           {% if page.profile.image_circular %}
             {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
           {% else %}
