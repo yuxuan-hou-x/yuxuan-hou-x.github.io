@@ -185,8 +185,9 @@ blockquote {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background-color: var(--global-navbar-bg-color);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  backdrop-filter: saturate(180%) blur(16px);
   min-height: 72px;
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
@@ -633,7 +634,7 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
 
       .preview {
         width: 100%;
@@ -669,9 +670,14 @@ footer.sticky-bottom {
       .title {
         font-weight: bolder;
         font-size: 1rem;
+        margin-bottom: 5.6px;
       }
 
       .author {
+        margin-bottom: 5.6px;
+        font-size: 14px;
+        line-height: 1.5;
+
         a {
           border-bottom: none;
 
@@ -683,9 +689,9 @@ footer.sticky-bottom {
 
         >em,
         >strong.self-author {
-          border-bottom: 1px solid;
+          border-bottom: 1px solid currentColor;
           font-style: normal;
-          color: var(--global-theme-color);
+          color: var(--global-text-color);
           font-weight: 700;
         }
 
@@ -699,6 +705,11 @@ footer.sticky-bottom {
             border-bottom: 1px dashed var(--global-text-color);
           }
         }
+      }
+
+      .periodical {
+        font-size: 14px;
+        line-height: 1.5;
       }
 
       .links {
@@ -716,7 +727,7 @@ footer.sticky-bottom {
           border: 1px solid var(--global-divider-color);
           border-radius: 0;
           box-shadow: none;
-          font-size: 0.88rem;
+          font-size: 13px;
           font-weight: 500;
           padding: 0.36rem 0.8rem;
           margin-left: 0;

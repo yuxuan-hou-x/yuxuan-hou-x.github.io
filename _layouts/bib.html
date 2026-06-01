@@ -32,7 +32,7 @@
         </div>
 
         <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="col-sm-8">
+        <div id="{{entry.key}}" class="col-sm-10">
         
           <!-- Title -->
           <div class="title"><strong>{{entry.title}}</strong></div>
@@ -77,7 +77,6 @@
                   {%- endif -%}
                 {%- endfor -%}
               {%- endif -%}
-
               {%- if forloop.length > 1 -%}
                 {%- if forloop.first == false -%},&nbsp;{%- endif -%}
                 {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
@@ -85,7 +84,7 @@
               {%- if author_is_self -%}
                 <strong class="self-author">{{author.first}} {{author.last}}</strong>
               {%- else -%}
-                {%- if coauthor_url -%}
+                {%- if site.publication_author_links and coauthor_url -%}
                   <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
                 {%- else -%}
                   {{author.first}} {{author.last}}

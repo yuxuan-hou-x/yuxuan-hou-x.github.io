@@ -4,6 +4,7 @@
 
 :root {
   --global-bg-color: #{$white-color};
+  --global-navbar-bg-color: rgba(255, 255, 255, 0.56);
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
@@ -36,6 +37,7 @@
 
 html[data-theme='dark'] {
   --global-bg-color: #{$grey-color-dark};
+  --global-navbar-bg-color: rgba(28, 28, 29, 0.56);
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color-light};
