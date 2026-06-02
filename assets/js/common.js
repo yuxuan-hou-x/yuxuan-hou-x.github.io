@@ -144,6 +144,40 @@ $(document).ready(function() {
     $('a').removeClass('waves-effect waves-light');
 });
 
+$(document).ready(function() {
+    const $publicationsSection = $("#publications");
+
+    if (!$publicationsSection.length || window.location.pathname !== "/") {
+        return;
+    }
+
+    const $navItems = $("#navbarNav .nav-item");
+    const $aboutItem = $("#navbarNav .nav-link[href='/']").closest(".nav-item");
+    const $publicationsItem = $("#navbarNav .nav-link[href='/publications'], #navbarNav .nav-link[href='/publications/'], #navbarNav .nav-link[href='/#publications']").closest(".nav-item");
+
+    if (!$aboutItem.length || !$publicationsItem.length) {
+        return;
+    }
+
+    const updateActiveNavItem = function() {
+        const navbarHeight = $("#navbar").outerHeight() || 0;
+        const sectionTop = $publicationsSection.offset().top;
+        const scrollPosition = $(window).scrollTop() + navbarHeight + 120;
+        const isPublicationsActive = scrollPosition >= sectionTop;
+        const $activeItem = isPublicationsActive ? $publicationsItem : $aboutItem;
+
+        if ($activeItem.hasClass("active")) {
+            return;
+        }
+
+        $navItems.removeClass("active");
+        $activeItem.addClass("active");
+    };
+
+    updateActiveNavItem();
+    $(window).on("scroll resize", updateActiveNavItem);
+});
+
 // bootstrap-toc
 $(document).ready(function () {
     if($('#toc-sidebar').length){
