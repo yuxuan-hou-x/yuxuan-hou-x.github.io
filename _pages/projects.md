@@ -3,7 +3,7 @@ layout: page
 title: Project
 permalink: /projects/
 description:
-nav: true
+nav: false
 nav_order: 3
 display_categories: [research, outreach]
 horizontal: false
