@@ -97,55 +97,14 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="Related Links">
-      <i class="fas fa-link"></i>
-      Related Links
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>Related Links</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <a href="https://arxiv.org/abs/2410.00995" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>arXiv Paper</h5>
-            <p>Open-access preprint introducing specification-conditioned analog circuit generation.</p>
-            <span class="work-venue">arXiv</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://www.sciencedirect.com/science/article/pii/S2095809925008148" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Engineering Version</h5>
-            <p>Journal version with the full framework, experiments, and test-time optimization results.</p>
-            <span class="work-venue">Engineering 2025</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://github.com/yuxuan-hou-x/CktGen" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Code Repository</h5>
-            <p>Training, generation, and evaluation code for CktGen.</p>
-            <span class="work-venue">GitHub</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="../" class="work-item">
-          <div class="work-info">
-            <h5>Main Homepage</h5>
-            <p>Return to the main academic homepage of Yuxuan Hou.</p>
-            <span class="work-venue">yuxuan-hou-x.github.io</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+  <nav class="page-outline" aria-label="Page outline">
+    <p class="page-outline__title">Outline</p>
+    <a href="#overview">Overview</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#method">Method</a>
+    <a href="#results">Results</a>
+    <a href="#BibTeX">BibTeX</a>
+  </nav>
 
   <main id="main-content">
     <section class="hero publication-header">
@@ -216,7 +175,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="overview">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
@@ -233,7 +192,7 @@
       </div>
     </section>
 
-    <section class="section hero is-light">
+    <section class="section hero is-light" id="abstract">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
@@ -256,7 +215,7 @@
       </div>
     </section>
 
-    <section class="section hero is-light">
+    <section class="section hero is-light" id="method">
       <div class="container is-max-desktop content">
         <h2 class="title is-3">Method</h2>
         <div class="publication-banner publication-banner--video method-video">
@@ -275,7 +234,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="results">
       <div class="container is-max-desktop content">
         <h2 class="title is-3">Results</h2>
         <h3 class="results-subsection-title">Specification-Conditioned Generation</h3>
