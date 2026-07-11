@@ -1,7 +1,7 @@
 /* Modern CSS Variables for consistent theming */
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary-color: #174ea6;
+  --primary-hover: #0d47a1;
   --secondary-color: #64748b;
   --accent-color: #0ea5e9;
   --text-primary: #1e293b;
@@ -187,7 +187,7 @@ body {
 
 .publication-authors {
     font-family: 'Inter', sans-serif !important;
-    color: #2563eb;
+    color: var(--primary-color);
     font-size: 1.14rem !important;
     font-weight: 600;
     line-height: 1.45;
@@ -316,7 +316,7 @@ body {
 }
 
 .publication-authors a:hover {
-    color: #1d4ed8 !important;
+    color: var(--primary-hover) !important;
 }
 
 .author-block {
@@ -360,7 +360,7 @@ body {
 
 .video-card {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-  border: 1px solid rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(23, 78, 166, 0.12);
   border-radius: 20px;
   box-shadow: var(--shadow-lg);
   padding: 1.25rem;
@@ -379,7 +379,7 @@ body {
   align-items: center;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(23, 78, 166, 0.1);
   color: var(--primary-color);
   font-size: 0.8rem;
   font-weight: 700;
@@ -538,7 +538,7 @@ body {
 .footer {
   background: var(--background-secondary);
   border-top: 1px solid var(--border-color);
-  padding: 3rem 1.5rem;
+  padding: 0.6rem 1.5rem;
 }
 
 .footer .content {
@@ -649,8 +649,9 @@ code {
 /* Page Outline */
 .page-outline {
   position: fixed;
-  top: 7rem;
+  top: 50%;
   left: 1.5rem;
+  transform: translateY(-50%);
   z-index: 1000;
   width: 150px;
   background: var(--background-primary);
@@ -672,17 +673,24 @@ code {
 .page-outline a {
   display: block;
   color: var(--text-secondary);
+  border-left: 3px solid transparent;
   font-size: 0.88rem;
   font-weight: 600;
   line-height: 1.25;
-  padding: 0.42rem 0;
+  padding: 0.42rem 0.5rem;
   text-decoration: none;
   transition: var(--transition);
 }
 
 .page-outline a:hover,
-.page-outline a:focus {
+.page-outline a:focus,
+.page-outline a.is-active {
   color: var(--primary-color);
+}
+
+.page-outline a.is-active {
+  background: rgba(23, 78, 166, 0.08);
+  border-left-color: var(--primary-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -785,6 +793,7 @@ code {
     left: 1rem;
     right: 1rem;
     top: auto;
+    transform: none;
     width: auto;
     display: flex;
     align-items: center;
@@ -799,8 +808,14 @@ code {
 
   .page-outline a {
     flex: 0 0 auto;
+    border-left: none;
+    border-bottom: 2px solid transparent;
     font-size: 0.78rem;
     padding: 0.32rem 0.35rem;
+  }
+
+  .page-outline a.is-active {
+    border-bottom-color: var(--primary-color);
   }
   
   .results-carousel .item {

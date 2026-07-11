@@ -54,6 +54,64 @@ window.addEventListener('scroll', function() {
     }
 });
 
+function setupPageOutlineScrollSpy() {
+    const outlineLinks = Array.from(document.querySelectorAll('.page-outline a[href^="#"]'));
+    const outlineItems = outlineLinks.map(link => {
+        const sectionId = decodeURIComponent(link.hash.slice(1));
+        return { link, section: document.getElementById(sectionId) };
+    }).filter(item => item.section);
+
+    if (outlineItems.length === 0) return;
+
+    const setActiveLink = activeLink => {
+        outlineLinks.forEach(link => {
+            const isActive = link === activeLink;
+            link.classList.toggle('is-active', isActive);
+
+            if (isActive) {
+                link.setAttribute('aria-current', 'location');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        });
+    };
+
+    const updateActiveLink = () => {
+        const readingLine = window.innerHeight * 0.35;
+        let activeItem = outlineItems[0];
+
+        outlineItems.forEach(item => {
+            if (item.section.getBoundingClientRect().top <= readingLine) {
+                activeItem = item;
+            }
+        });
+
+        const pageBottom = window.scrollY + window.innerHeight;
+        if (pageBottom >= document.documentElement.scrollHeight - 2) {
+            activeItem = outlineItems[outlineItems.length - 1];
+        }
+
+        setActiveLink(activeItem.link);
+    };
+
+    let updateScheduled = false;
+    const scheduleUpdate = () => {
+        if (updateScheduled) return;
+
+        updateScheduled = true;
+        window.requestAnimationFrame(() => {
+            updateScheduled = false;
+            updateActiveLink();
+        });
+    };
+
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    updateActiveLink();
+}
+
+document.addEventListener('DOMContentLoaded', setupPageOutlineScrollSpy);
+
 // Video carousel autoplay when in view
 function setupVideoCarouselAutoplay() {
     const carouselVideos = document.querySelectorAll('.results-carousel video');
