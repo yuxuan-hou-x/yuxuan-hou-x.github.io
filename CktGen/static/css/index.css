@@ -119,6 +119,10 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
+#main-content > .section + .section {
+  border-top: 1px solid var(--border-color);
+}
+
 .hero-body {
   padding: 4rem 1.5rem;
 }
