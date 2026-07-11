@@ -206,6 +206,17 @@ body {
   white-space: nowrap;
 }
 
+.publication-authors sup,
+.publication-meta-line sup {
+  font-size: 0.68em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.publication-authors sup {
+  margin-left: 0.08em;
+}
+
 .publication-meta-stack {
   max-width: 1080px;
   margin: 0 auto 1rem;
